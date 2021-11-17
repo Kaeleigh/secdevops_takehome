@@ -7,13 +7,13 @@ This take home assignment is designed to allow you to demonstrate DevOps and sec
 Our expectations are:
 
 * There is no time limit or due date, though we expect this may take at least a couple days to accomplish and test. An honorarium will be provided as compesation for this work, paid upon receipt of the deliverables outlined below.
-* This is a skills test, so we do not expect the finished product to be production ready. Loose ends, hard coded things, hacks to save time, all acceptable (though bonus points if you highlight those in your code and your writeup and talk through a bit how you'd make them production ready).
+* This is a skills test and a way to demonstrate your talents, so we do not expect the finished product to be production ready. Loose ends, hard coded things, hacks to save time, all acceptable, though bonus points if you highlight those in your code and your writeup and talk through a bit how you'd make them production ready.
 * That said, we do expect to be able to run your work ourselves to see what you've done and how it functions.
-* Your work should be licensed in a way that allows us to examine and test out the code you wrote for the purposes of our hiring process. We do not need ownership or the right to run it in production, though a permissive open source license like MIT would be fine here too.
+* Your work should be licensed in a way that allows us to examine the code you wrote and run it so we can test out its functions for the purposes of our hiring process. We do not need ownership or the right to run it in production, though a permissive open source license like MIT would be fine here too.
 
 Your deliverables are:
 
-* A repository on GitHub (public or private) with your work, accomplishing the goals set out in the instructions below. (Feel free to fork this repository if you'd like.)
+* A repository on GitHub (public or private) with your work, accomplishing the goals set out in the instructions below. Feel free to fork this repository if you'd like.
 * A writeup (including diagrams if desired) of your infrastructure and setup. (Can be a readme type file in the repository if you want.)
 * Instructions for how to run your code ourselves and demonstrate the features, including any necessary services we need to sign up for, etc... (Can be a readme type file in the repository if you want.)
 
