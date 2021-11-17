@@ -23,7 +23,11 @@ When you are finished, email a link to your repository, writeup, and instruction
 
 Your goal with this assignment is to write infrastructure as code that provisions a set of web servers in an auto scaling group behind a load balancer. (No need to set up a databse or a full web application stack, though you can if you want.)
 
-The auto scaling group should have 3 servers in it by default, with a max of 5 total, and scale and descale based on simulated load (so your work should have a way to manually simulate load or send some kind of scaling signal to cause scaling and descaling to happen). The servers should serve a basic html page that says “Hello world” with the current date and time, at some kind of publicly available endpoint (does not have to be a full website, can be a load balanceer URL of a cloud service for instance). Bonus points for zero manual config on boot. (This could all be accomplished with Terraform, Chef, Elasticbeanstalk, etc...)
+The auto scaling group should have 3 servers in it by default, with a max of 5 total, and scale and descale based on simulated load, so your work should have a way to manually simulate load or send some kind of scaling signal to cause scaling and descaling to happen. 
+
+The servers should serve a basic html page that says “Hello world” with the current date and time, at some kind of endpoint. This does not have to be a full website served at a domain name, it can be a load balancer URL of a cloud service for instance, or some other endpoint that requires some local tooling to view in a browser, as long as that's explained in the instructions. 
+
+Bonus points for zero manual config on boot. (This could all be accomplished with Terraform, Chef, Elasticbeanstalk, etc...)
 
 In addition, write a method to automatically update or replace servers whenever a new security update for the operating system or installed packages is available (or perhaps on some kind of schedule, like nightly), making sure to test servers running the new configuration are alive and serving before putting them in to the load balancer.
 
