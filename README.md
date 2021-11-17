@@ -12,7 +12,7 @@ Our expectations are:
 
 Your deliverables are:
 
-* A repository on GitHub (public or private) with your work, accomplishing the goals set out in the instructions below.
+* A repository on GitHub (public or private) with your work, accomplishing the goals set out in the instructions below. (Feel free to fork this repository if you'd like.)
 * A writeup (including diagrams if desired) of your infrastructure and setup. (Can be a readme type file in the repository if you want.)
 * Instructions for how to run your code ourselves and demonstrate the features, including any necessary services we need to sign up for, etc... (Can be a readme type file in the repository if you want.)
 
