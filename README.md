@@ -17,6 +17,8 @@ Your deliverables are:
 * A writeup (including diagrams if desired) of your infrastructure and setup. (Can be a readme type file in the repository if you want.)
 * Instructions for how to run your code ourselves and demonstrate the features, including any necessary services we need to sign up for, etc... (Can be a readme type file in the repository if you want.)
 
+Overall, this project should demonstrate your skills in the DevOps and security realm, so please approach it in that spirit. It doesn't have to be perfect, and it doesn't have to be "right" or be free of bugs and the like. But it should demonstrate what you can do.
+
 When you are finished, email a link to your repository, writeup, and instructions to your hiring contact. If you need our GitHub usernames to add to a private repository, we can provide those.
 
 ## Instructions and Goals
