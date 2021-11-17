@@ -6,7 +6,7 @@ This take home assignment is designed to allow you to demonstrate DevOps and sec
 
 Our expectations are:
 
-* There is no time limit or due date, though we expect this may take at least a couple days to accomplish and test. An honorarium will be provided as compesation for this work.
+* There is no time limit or due date, though we expect this may take at least a couple days to accomplish and test. An honorarium will be provided as compesation for this work, paid upon completion.
 * This is a skills test, so we do not expect the finished product to be production ready.
 * That said, we do expect to be able to run your work ourselves to see what you've done and how it functions.
 
