@@ -27,7 +27,7 @@ Your goal with this assignment is to write infrastructure as code that provision
 
 The auto scaling group should have 3 servers in it by default, with a max of 5 total, and scale and descale based on simulated load, so your work should have a way to manually simulate load or send some kind of scaling signal to cause scaling and descaling to happen. 
 
-The servers should serve a basic HTMLK page that says “Hello world” with the current date and time, at some kind of endpoint. This does not have to be a full website served at a domain name, it can be a load balancer URL of a cloud service for instance, or some other endpoint that requires some local tooling to view in a browser, as long as that's explained in the instructions. 
+The servers should serve a basic HTML page that says “Hello world” with the current date and time, at some kind of endpoint. This does not have to be a full website served at a domain name, it can be a load balancer URL of a cloud service for instance, or some other endpoint that requires some local tooling to view in a browser, as long as that's explained in the instructions. 
 
 Bonus points for zero manual config on boot. (This could all be accomplished with Terraform, Chef, Elasticbeanstalk, etc...)
 
