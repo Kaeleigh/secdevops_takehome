@@ -6,7 +6,7 @@ This take home assignment is designed to allow you to demonstrate DevOps and sec
 
 Our expectations are:
 
-* There is no time limit or due date, though we expect this may take at least a couple days to accomplish and test. An honorarium will be provided as compesation for this work, paid upon receipt of the deliverables outlined below.
+* There is no time limit or due date, though we expect this may take at least a couple days to accomplish and test. An honorarium will be provided as compensation for this work, paid upon receipt of the deliverables outlined below.
 * This is a skills test and a way to demonstrate your talents, so we do not expect the finished product to be production ready. Loose ends, hard coded things, hacks to save time, all acceptable, though bonus points if you highlight those in your code and your writeup and talk through a bit how you'd make them production ready.
 * That said, we do expect to be able to run your work ourselves to see what you've done and how it functions.
 * Your work should be licensed in a way that allows us to examine the code you wrote and run it so we can test out its functions for the purposes of our hiring process. We do not need ownership or the right to run it in production, though a permissive open source license like MIT would be fine here too.
@@ -23,7 +23,7 @@ When you are finished, email a link to your repository, writeup, and instruction
 
 ## Instructions and Goals
 
-Your goal with this assignment is to write infrastructure as code that provisions a set of web servers in an auto scaling group behind a load balancer. (No need to set up a databse or a full web application stack, though you can if you want.)
+Your goal with this assignment is to write infrastructure as code that provisions a set of web servers in an auto scaling group behind a load balancer. (No need to set up a database or a full web application stack, though you can if you want.)
 
 The auto scaling group should have 3 servers in it by default, with a max of 5 total, and scale and descale based on simulated load, so your work should have a way to manually simulate load or send some kind of scaling signal to cause scaling and descaling to happen. 
 
@@ -37,6 +37,6 @@ Your setup should also take into account industry-standard security practices, i
 
 We use Ruby on Rails, Linux (Ubuntu primarily), Chef or Elasticbeanstalk, Cloudformation, and AWS for our main stack, but feel free to implement on whatever stack you're most comfortable with.
 
-If you have any questions as you go, please don't hestitate to reach out to your hiring contact.
+If you have any questions as you go, please don't hesitate to reach out to your hiring contact.
 
 Good luck! We're looking forward to seeing your work!
