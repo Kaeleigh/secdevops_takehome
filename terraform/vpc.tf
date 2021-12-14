@@ -1,58 +1,74 @@
-module "vpc" {
-  source                = "terraform-aws-modules/vpc/aws"
-  name                  = var.vpc_name
-  cidr                  = var.vpc_cidr
-  azs                   = var.vpc_azs
-  enable_nat_gateway    = true
-  enable_dns_hostnames  = true
+resource "aws_vpc" "hello-world-vpc" {
+  cidr_block       = "10.0.0.0/16"
+  enable_dns_hostnames = true
+
+  tags = {
+    Name = "Hello World VPC"
+  }
 }
 
-resource "aws_subnet" "public_one" {
-  vpc_id    = aws_vpc.ops_vpc.id
+resource "aws_subnet" "subnet_1" {
+  vpc_id     = aws_vpc.hello-world-vpc.id
   cidr_block = "10.0.0.0/24"
-  availability_zone = "us-east-1a"
+  availability_zone = "us-east-2a"
+
+  tags = {
+    Name = "Public Subnet us-east-2a"
+  }
 }
 
-resource "aws_subnet" "public_two" {
-  vpc_id    = aws_vpc.ops_vpc.id
+resource "aws_subnet" "subnet_2" {
+  vpc_id     = aws_vpc.hello-world-vpc.id
   cidr_block = "10.0.1.0/24"
-  availability_zone = "us-east-1b"
-}
+  availability_zone = "us-east-2b"
 
-resource "aws_internet_gateway" "ops_vpc_igw" {
-  vpc_id = aws_vpc.ops_vpc.id
-}
-
-resource "aws_route_table" "ops_vpc_east_1a_public" {
-  vpc_id = aws_vpc.ops_vpc.id
-
-  route {
-      cidr_block = "0.0.0.0/0"
-      gateway_id = aws_internet_gateway.ops_vpc_igw.id
+  tags = {
+    Name = "Public Subnet us-east-2b"
   }
 }
 
-resource "aws_route_table_association" "ops_vpc_east_1a_public" {
-    subnet_id = var.vpc_public_subnets.id
-    route_table_id = aws_route_table.ops_vpc_east_1a_public.id
+resource "aws_subnet" "subnet_3" {
+  vpc_id     = aws_vpc.hello-world-vpc.id
+  cidr_block = "10.0.2.0/24"
+  availability_zone = "us-east-2c"
+
+  tags = {
+    Name = "Public Subnet us-east-2c"
+  }
 }
 
-resource "aws_security_group" "inbound_ssh" {
-  name        = "inbound_ssh_sg"
-  description = "allows ssh inbound connections"
-  vpc_id      = aws_vpc.ops_vpc.id
+resource "aws_internet_gateway" "igw" {
+  vpc_id = aws_vpc.hello-world-vpc.id
 
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+  tags = {
+    Name = "Internet Gateway"
   }
+}
 
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+resource "aws_route_table" "rt_public" {
+    vpc_id = aws_vpc.hello-world-vpc.id
+
+    route {
+        cidr_block = "0.0.0.0/0"
+        gateway_id = aws_internet_gateway.igw.id
+    }
+
+    tags = {
+        Name = "Public Subnet Route Table"
+    }
+}
+
+resource "aws_route_table_association" "rt_1" {
+    subnet_id = aws_subnet.subnet_1.id
+    route_table_id = aws_route_table.rt_public.id
+}
+
+resource "aws_route_table_association" "rt_2" {
+    subnet_id = aws_subnet.subnet_2.id
+    route_table_id = aws_route_table.rt_public.id
+}
+
+resource "aws_route_table_association" "rt_3" {
+    subnet_id = aws_subnet.subnet_3.id
+    route_table_id = aws_route_table.rt_public.id
 }
