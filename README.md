@@ -24,18 +24,18 @@ Hello and welcome to my best attempt of this take home skills project.
 8. Create your own self-signed certificate by running the following command: openssl req -x509 -newkey rsa:4096 -keyout _______.pem -out ________.pem -sha256 -days 365 -nodes
     - Fill in the first blank with the name of your private key
     - Fill in the second blank with a name for your certificate
-Save the certificate.pem file inside the terraform directory
-Run the following command in the terminal
+9. Save the certificate.pem file inside the terraform directory
+10. Run the following command in the terminal
     - aws configure
-7. When prompted paste in your access key, secret key, region and output
-8. Verify you have terraform and AWS CLI running
-9. Open instance.tf & replace keyname on line 1,2 and 11 with your own keypair name & on line 3 fill in with your own public_key >> Save file
-10. Open certificate.tf & replace the certificate file name & private key name on lines 33 & 34 with your own certificate & private key file names  >> Save file
-9. Run the following commands
+11. When prompted paste in your access key, secret key, region and output
+12. Verify you have terraform and AWS CLI running
+13. Open instance.tf & replace keyname on line 1,2 and 11 with your own keypair name & on line 3 fill in with your own public_key >> Save file
+14. Open certificate.tf & replace the certificate file name & private key name on lines 33 & 34 with your own certificate & private key file names  >> Save file
+15. Run the following commands
     - terraform init
     - terraform plan
     - terraform apply
-10. Once everything has finished building, copy the elb_dns_name from the terminal & paste into a open browser
+16. Once everything has finished building, copy the elb_dns_name from the terminal & paste into a open browser
 
 
 # Honest comments
